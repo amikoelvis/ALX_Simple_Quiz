@@ -5,14 +5,14 @@ function checkAnswer() {
     const correctAnswer = '4';
 
     // Retrieve the User’s Answer
-    const userAnswer = document.querySelector('input[name="quiz"]:checked');
+    const userAnswer = document.querySelector('input[name="quiz"]:checked').value;
 
     // Compare the User’s Answer with the Correct Answer
     // Get the feedback element
     const feedBack = document.querySelector('#feedback');
 
     // Check if the user has selected an answer
-    if (userAnswer.value === correctAnswer) {
+    if (userAnswer === correctAnswer) {
         feedBack.textContent = "Correct! Well done.";
     } else {
         feedBack.textContent = "That's incorrect. Try again!";
